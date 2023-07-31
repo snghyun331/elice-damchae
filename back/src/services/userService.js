@@ -95,23 +95,16 @@ class userService {
       return { errorMessage };
     }
 
-    if (toUpdate.nickname) {
-      const fieldToUpdate = 'nickname';
-      const newValue = toUpdate.nickname;
-      user = await User.update({ userId, fieldToUpdate, newValue });
-    }
+    const { nickname, password, mbti } = toUpdate;
 
-    if (toUpdate.password) {
-      const fieldToUpdate = 'password';
-      const newValue = await bcrypt.hash(toUpdate.password, 10);
-      user = await User.update({ userId, fieldToUpdate, newValue });
-    }
-
-    if (toUpdate.mbti) {
-      const fieldToUpdate = 'mbti';
-      const newValue = toUpdate.mbti;
-      user = await User.update({ userId, fieldToUpdate, newValue });
-    }
+    user = await User.update({
+      userId,
+      newValue: {
+        ...(nickname && { nickname }),
+        ...(password && { password }),
+        ...(mbti && { mbti }),
+      },
+    });
 
     return user;
   }

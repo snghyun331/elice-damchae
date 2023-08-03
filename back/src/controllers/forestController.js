@@ -300,10 +300,13 @@ class ForestController {
   //   }
   // }
   static async getPostsByAuthorMBTI(req, res) {
-    const mbti = req.params.mbti; // 라우트에서 MBTI 파라미터를 가져옵니다.
+    // api/forests/mbti?filter=ISTJ,ISFJ,INFJ,INTJ,ISTP,ISFP,INFP,INTP,ESTP
+
+    const mbtiList = req.query.filter.split(',');
+    // const mbti = req.params.mbti; // 라우트에서 MBTI 파라미터를 가져옵니다.
 
     try {
-      const posts = await forestModel.findByForestMbti(mbti);
+      const posts = await forestModel.findByForestMbti(mbtiList);
 
       res.json(posts);
     } catch (error) {

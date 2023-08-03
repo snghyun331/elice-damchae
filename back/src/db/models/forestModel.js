@@ -77,20 +77,44 @@ class forestModel {
       throw new Error(`Error reading posts by authors: ${error.message}`);
     }
   }
-  // static async findByForestMbti(mbti) {
-  //   try {
-  //     // 작성자 MBTI가 'ISTJ'인 사용자들을 찾습니다.
-  //     const usersWithMBTI = await UserModel.find({ mbti: mbti });
-  //     // 찾은 사용자들의 _id 목록을 추출합니다.
-  //     const userIds = usersWithMBTI.map((user) => user._id);
-  //     // 작성자가 ISTJ인 블로그 포스트들을 찾습니다.
-  //     const posts = await ForestPost.find({ author: { $in: userIds } });
-  //     return posts;
-  //   } catch (error) {
-  //     throw new Error(`Error finding
-  // blog posts by author's MBTI: ${error.message}`);
-  //   }
-  // }
+
+  static async findByForestMbti(mbtiList) {
+    try {
+      // // 작성자 MBTI가 'ISTJ'인 사용자들을 찾습니다.
+      // const usersWithMBTI = await UserModel.find({ mbti: mbti });
+      // // 찾은 사용자들의 _id 목록을 추출합니다.
+      // const userIds = usersWithMBTI.map((user) => user._id);
+      // // 작성자가 ISTJ인 블로그 포스트들을 찾습니다.
+      // const posts = await ForestPost.find({ author: { $in: userIds } });
+
+      const posts = await ForestPost.aggregate([
+        {
+          $lookup: {
+            from: 'users',
+            localField: 'userInfo',
+            foreignField: '_id',
+            as: 'user',
+          },
+        },
+        {
+          $unwind: '$user',
+        },
+        {
+          $match: {
+            'user.mbti': {
+              $in: mbtiList,
+            },
+          },
+        },
+      ]);
+
+      return posts;
+    } catch (error) {
+      throw new Error(
+        `Error finding blog posts by author's MBTI: ${error.message}`,
+      );
+    }
+  }
 
   // static async findByMbti(skip, limit, getMbti) {
   //   console.log('findByMbti - getMbti:', getMbti);

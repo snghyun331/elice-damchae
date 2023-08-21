@@ -60,7 +60,7 @@
 
 ## 2. 프로젝트 아키텍처
 
-<img src="https://github.com/snghyun331/project-ReviewAnalysis/assets/108854903/dfabde44-cba4-4487-b45c-9136e389384d" height="60%" width="60%">
+<img src="https://github.com/snghyun331/project-ReviewAnalysis/assets/108854903/dfabde44-cba4-4487-b45c-9136e389384d" height="75%" width="75%">
 
 ## 3. 웹 서비스 페이지 구성 소개
 

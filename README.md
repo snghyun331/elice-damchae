@@ -3,8 +3,8 @@
 - 서비스명: 담채
 - 팀명: 5팀
 
-# 기술 스택
-## FrontEnd
+## 기술 스택
+### FrontEnd
 
 <div>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
@@ -15,7 +15,7 @@
 <img src="https://img.shields.io/badge/JWT-41454A?style=flat-square&logo=JSON%20web%20tokens&logoColor=white"/>
 </div>
 
-## BackEnd
+### BackEnd
 
 <div>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
@@ -25,7 +25,7 @@
 <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white"/>
 </div>
 
-## AI
+### AI
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
 
@@ -44,7 +44,7 @@
      - 44000여 건
 
 
-# 담채란?
+## 담채란?
 - 감정을 나누고 공유하는 감정일기 플랫폼과 MBTI기반 감정분석 커뮤니티
 - 인공지능 모델을 통해 텍스트에서 감정을 추출하고 분류해서 보여준다
 - 나의 감정을 살피고, 나와 다른 타인의 감정도 알아보고, 감정의 분류가 가능하졌으니 감정의 통계를 내 볼 수 있다

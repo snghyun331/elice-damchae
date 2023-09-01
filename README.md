@@ -303,3 +303,29 @@
  ┣ 📜README.md
  ┗ 📜yarn.lock
 ```
+## .env 파일
+**Back**
+```
+SERVER_PORT=3000
+MONGODB_URL="mongodb+srv://5team:5team@cluster0.nd3mdfp.mongodb.net/"
+MONGODB_ALTERNATIVE_URL = 'mongodb://localhost:27017/test_db'
+JWT_SECRET_KEY="ad5kafl91ak@192vk0ckv#ao!d3o1qw%ez"
+GOOGLE_CLIENT_ID="105303493089-anc9aks7a8o84kk9fbmmt4nui50ldqlp.apps.googleusercontent.com"
+SENTIMENT_PREDICT_FLASK_SERVER_URL = "http://127.0.0.1:5000/predict"
+STABLE_DIFFUSION_FLASK_SERVER_URL = "http://127.0.0.1:5002/generate-image"
+
+SMTP_SERVICE="gmail"
+SMTP_USER="snghyun331@gmail.com"
+SMTP_PASSWORD="yrchtfwitnayfpwn"
+
+S3_ACCESS_KEY_ID="AKIATUM22CUB5IGYJHWW"
+S3_SECRET_ACCESS_KEY="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"
+S3_REGION="ap-northeast-2"
+S3_BUCKET_NAME="damchae"
+```
+**Front**
+```
+VITE_SERVER_HOST="http://localhost:3000/"
+VITE_GOOGLE_CLIENT_ID="105303493089-anc9aks7a8o84kk9fbmmt4nui50ldqlp.apps.googleusercontent.com"https://discord.com/channels/1074967669624807464/1074967669922611241
+FE_URL="http://localhost:5173/"
+```

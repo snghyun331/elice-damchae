@@ -325,7 +325,7 @@ S3_BUCKET_NAME="damchae"
 ```
 **Front**
 ```
-VITE_SERVER_HOST="http://localhost:3000/"
+VITE_SERVER_HOST="http://localhost:3000/api"
 VITE_GOOGLE_CLIENT_ID="105303493089-anc9aks7a8o84kk9fbmmt4nui50ldqlp.apps.googleusercontent.com"https://discord.com/channels/1074967669624807464/1074967669922611241
 FE_URL="http://localhost:5173/"
 ```

@@ -1,5 +1,5 @@
 # 담채(DamChae) - 감정을 담아 채우는 공간
-
+(관련 포트폴리오 링크 : https://senghyeon.notion.site/MBTI-9f312e6af863452ab24ec66499405271?pvs=4)
 - 서비스명: 담채
 - 팀명: 5팀
 

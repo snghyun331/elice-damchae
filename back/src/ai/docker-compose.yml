@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nodekobert:
+    image: "snghyun/kobert"
+    container_name: "nodekobert"
+    links:
+      - "nodeflask1"
+  nodeflask1:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    container_name: "nodeflask1"
+    working_dir: "/app"
+    ports:
+      - "5000:5000"
+

@@ -3,14 +3,9 @@ services:
   nodekobert:
     image: "snghyun/kobert"
     container_name: "nodekobert"
-    links:
-      - "nodeflask1"
-  nodeflask1:
-    build:
-      context: "."
-      dockerfile: Dockerfile
-    container_name: "nodeflask1"
-    working_dir: "/app"
+    volumes:
+      - .:/app
+    command: sh -c "pip install flask && python /app/app.py"
     ports:
       - "5000:5000"
 

@@ -13,6 +13,7 @@ from transformers import BertModel
 from transformers import AdamW
 from transformers.optimization import get_cosine_schedule_with_warmup
 
+np.bool = np.bool_
 class BERTSentenceTransform:
     def __init__(self, tokenizer, max_seq_length,vocab, pad=True, pair=True):
         self._tokenizer = tokenizer

@@ -4,15 +4,25 @@
 - 프로젝트 배포 : https://kdt-ai7-team05.elicecoding.com/
 
 ## 로컬환경에서 실행
+**초기 실행**
 1. 깃을 클론합니다.
     ```
     git clone https://github.com/snghyun331/elice-damchae.git
     ```
-2. front, back 실행에 필요한 라이브러리를 설치합니다.(루트 폴더에서 실행)
+2. front, back 실행에 필요한 라이브러리를 각각 설치합니다.
     ```
+    cd back
     yarn
     ```
-3. 프로젝트를 실행합니다.(front와 back을 동시에 실행)
+    ```
+    cd front
+    yarn
+    ```
+    ```
+    cd ..
+    yarn
+    ```
+3. root 폴더에서 프로젝트를 실행합니다.(front와 back을 동시에 실행)
    ```
     yarn dev
    ```

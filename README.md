@@ -1,6 +1,21 @@
 # 담채(DamChae) - 감정을 담아 채우는 공간
 - 서비스명: 담채
 - 팀명: 5팀
+- 프로젝트 배포 : https://kdt-ai7-team05.elicecoding.com/
+
+## 로컬환경에서 실행
+1. 깃을 클론합니다.
+    ```
+    git clone https://github.com/snghyun331/elice-damchae.git
+    ```
+2. front, back 실행에 필요한 라이브러리를 설치합니다.(루트 폴더에서 실행)
+    ```
+    yarn install
+    ```
+3. 프로젝트를 실행합니다.(front와 back을 동시에 실행)
+   ```
+    yarn dev
+   ```
 
 ## 기술 스택
 ### FrontEnd
